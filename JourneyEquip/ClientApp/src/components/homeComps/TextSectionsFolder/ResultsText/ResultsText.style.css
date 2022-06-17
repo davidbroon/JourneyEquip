@@ -1,0 +1,70 @@
+@media screen and (min-width: 580px) {
+	.ResultsTextParagraph {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 41px;
+		text-align: center;
+		min-height: 244px;
+		padding-left: 226px;
+		padding-right: 226px;
+		padding-top: 24px;
+		margin-bottom: 15%;
+	}
+	.ResultsTextLine {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		gap: 10px;
+		width: 6px;
+		max-height: 222px;
+		height: 222px;
+		background-color: #f4a306;
+	}
+	.ResultsTextContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.reveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@media screen and (max-width: 579px) {
+	.ResultsTextParagraph {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		min-height: 244px;
+		padding-left: 16%;
+		padding-right: 16%;
+		padding-top: 24px;
+		margin-bottom: 12%;
+	}
+	.reveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(50px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

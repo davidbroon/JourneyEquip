@@ -1,0 +1,124 @@
+@media screen and (min-width: 580px) {
+	.leadersParagraph {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		color: #000000;
+		/* background-color: #f8f8f8; */
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 25px;
+		line-height: 35px;
+		text-align: center;
+		min-height: 244px;
+		padding-top: 24px;
+		margin-top: 2%;
+		margin-bottom: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.leadersTitle {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 60px;
+		line-height: 74px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #17223c;
+		margin-bottom: 3%;
+		padding-left: 12%;
+		padding-right: 12%;
+		font-family: 'articulat-cf';
+	}
+	.reveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	/* .leaderLine {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		gap: 10px;
+		width: 6px;
+		height: 236px;
+		background-color: #f4a306;
+		margin-top: 3%;
+	}
+	.leaderLineContainer {
+		width: -webkit-fill-available;
+		text-align: -webkit-center;
+	} */
+}
+@media screen and (max-width: 579px) {
+	.leadersParagraph {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		color: #000000;
+		/* background-color: #f8f8f8; */
+		font-family: 'articulat-cf';
+		min-height: 244px;
+		margin-right: 16%;
+		margin-left: 16%;
+		margin-top: 3%;
+		margin-bottom: 5%;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #000000;
+	}
+	.leadersTitle {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 34px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+
+		color: #000000;
+		font-family: 'articulat-cf';
+	}
+	.leaderLine {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		gap: 10px;
+		width: 3px;
+		height: 89px;
+		background-color: #f4a306;
+	}
+	.leaderLineContainer {
+		width: -webkit-fill-available;
+		text-align: -webkit-center;
+		margin-bottom: 59px;
+	}
+	.reveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(50px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

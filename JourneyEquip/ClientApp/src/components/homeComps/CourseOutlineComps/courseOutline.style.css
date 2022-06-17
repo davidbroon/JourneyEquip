@@ -1,0 +1,212 @@
+@media screen and (min-width: 580px) {
+	#courseOutlineContainer {
+		display: flex;
+		flex-direction: row;
+		margin-left: 5%;
+		margin-right: 5%;
+		flex-wrap: wrap;
+		margin-top: 10%;
+		justify-content: space-around;
+		margin-bottom: 5%;
+	}
+	.coTitle {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 800;
+		font-size: 60px;
+		line-height: 84px;
+		text-align: center;
+		color: #17223c;
+		margin-bottom: 12%;
+	}
+	.coTopRow {
+		border-top: 4px solid #f4a306;
+	}
+
+	.courseOutlineItem {
+		display: flex;
+		flex-direction: column;
+		height: 220px;
+		/* width: 22%; */
+		align-items: flex-start;
+		margin-right: 1%;
+		margin-left: 1%;
+		border-bottom: 4px solid #f4a306;
+	}
+	.courseOutlineContent {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 25px;
+		margin-top: -60px;
+		color: #000000;
+		text-align: left;
+	}
+	.courseOutlineBackNumber {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 150px;
+		line-height: 202px;
+		/* identical to box height, or 133% */
+		color: #17223c;
+		opacity: 0.1;
+	}
+	.coContentTwo {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 45px;
+		line-height: 61px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		margin-top: 52vh;
+		margin-bottom: 50vh;
+		margin-right: 5vh;
+		margin-left: 5vh;
+	}
+	.topReveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(-150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.topReveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.middleReveal {
+		position: relative;
+		margin-right: 80px;
+		transform: translateX(-150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.middleReveal.active {
+		margin-right: 0px;
+		transform: translateX(0);
+		opacity: 1;
+	}
+	.bottomReveal {
+		position: relative;
+		/* margin-right: 172px; */
+		transform: translateY(150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.bottomReveal.active {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	#courseOutlineContainer .courseOutlineItem {
+		flex: 1 0 20%;
+		box-sizing: border-box;
+	}
+	@media (min-width: 650px) {
+		#courseOutlineContainer .courseOutlineItem {
+			max-width: 33.333333%;
+		}
+	}
+	@media (min-width: 975px) {
+		#courseOutlineContainer .courseOutlineItem {
+			max-width: 19%;
+		}
+	}
+}
+
+@media screen and (max-width: 579px) {
+	#courseOutlineContainer {
+		display: flex;
+		flex-direction: row;
+		margin-left: 5%;
+		margin-right: 5%;
+		flex-wrap: wrap;
+		margin-top: 56px;
+		margin-bottom: 75px;
+		justify-content: center;
+	}
+	.coTitle {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 34px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #000000;
+		margin-bottom: 15%;
+		justify-content: center;
+	}
+	.courseOutlineItem {
+		display: flex;
+		flex-direction: column;
+		height: 52px;
+		align-items: flex-start;
+		margin-right: 3%;
+		margin-left: 3%;
+		width: 100%;
+		border-bottom: 3px solid #f4a306;
+		justify-content: end;
+	}
+	.coTopRowSmallScreen {
+		border-top: 3px solid #f4a306;
+	}
+	.courseOutlineContent {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		color: #000000;
+		margin-left: 50px;
+	}
+	.courseOutlineBackNumber {
+		font-family: 'lemonmilkbold';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 40px;
+		display: flex;
+		align-items: center;
+		color: #0195ba;
+		opacity: 0.1;
+		margin-left: 50px;
+		margin-bottom: -27px;
+	}
+	.coContentTwo {
+		font-family: 'articulat-cf';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 22px;
+		line-height: 30px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		margin-top: 5vh;
+		margin-right: 32px;
+		margin-left: 32px;
+		margin-bottom: 25vh;
+	}
+	.coLine {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		gap: 10px;
+		width: 3px;
+		height: 89px;
+		background-color: #f4a306;
+	}
+	.coLineContainer {
+		width: -webkit-fill-available;
+		text-align: -webkit-center;
+		margin-bottom: 59px;
+		margin-top: 59px;
+	}
+}
