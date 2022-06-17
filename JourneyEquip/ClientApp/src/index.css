@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'LemonmilkBold';
+	src: local('LemonmilkBold'),
+		url('../src/assets/fonts/LEMONMILK-Bold.otf') format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'LemonmilkMedium';
+	src: local('LemonmilkMedium'),
+		url('../src/assets/fonts/LEMONMILK-Medium.otf') format('truetype');
+	font-weight: 600;
+}

@@ -4,20 +4,35 @@ import AppRoutes from './AppRoutes';
 import AuthorizeRoute from './components/api-authorization/AuthorizeRoute';
 import { Layout } from './components/Layout';
 import './custom.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Home from './components/pages/home/Home';
 
 export default class App extends Component {
-  static displayName = App.name;
+	static displayName = App.name;
 
-  render() {
-    return (
-      <Layout>
-        <Routes>
-          {AppRoutes.map((route, index) => {
-            const { element, requireAuth, ...rest } = route;
-            return <Route key={index} {...rest} element={requireAuth ? <AuthorizeRoute {...rest} element={element} /> : element} />;
-          })}
-        </Routes>
-      </Layout>
-    );
-  }
+	render() {
+		return (
+			<Layout>
+				<Routes>
+					{AppRoutes.map((route, index) => {
+						const { element, requireAuth, ...rest } = route;
+						return (
+							<Route
+								key={index}
+								{...rest}
+								element={
+									requireAuth ? (
+										<AuthorizeRoute {...rest} element={element} />
+									) : (
+										element
+									)
+								}
+							/>
+						);
+					})}
+				</Routes>
+			</Layout>
+		);
+	}
 }
