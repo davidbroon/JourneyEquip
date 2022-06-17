@@ -135,6 +135,12 @@
 		font-size: 16px;
 	}
 
+	.formAndButtonContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	button[type='submit'] {
 		background-color: #49a187;
 		color: white;
@@ -179,17 +185,19 @@
 	}
 	.styleButton:hover {
 		background: transparent;
-		border: '1px solid #0195BA';
+		border: '1px solid #f4a30690';
 		color: #000;
-		box-shadow: 0 0 10px 0 #f4a306 inset, 0 0 10px 4px #f4a306;
+		border-color: #f4a306;
+
+		box-shadow: 0 0 10px 0 #f4a30690 inset, 0 0 10px 4px #f4a306;
 	}
 	.styleButton:focus {
 		background: transparent;
 		color: #000;
-		border: '1px solid #0195BA';
+		border: '1px solid #0';
 	}
 	.styleButton:active {
-		border: 1px solid #0195ba;
+		border: 1px solid #f4a30690;
 	}
 	.styleButton:disabled {
 		background-color: 'rgba(0,0,0,0)';
@@ -235,6 +243,8 @@
 	.openFormButton {
 		display: flex;
 		justify-content: center;
+		height: 10vh;
+		margin-bottom: -4vh;
 	}
 
 	.styleButton {
@@ -258,18 +268,21 @@
 	}
 	.styleButton:hover {
 		background: #fff;
-		border: '1px solid #0195BA';
+		border: '1px solid #f4a30690';
+		border-color: #f4a306;
 		color: #000;
 		box-shadow: 0 0 10px 0 #f4a306 inset, 0 0 10px 4px #f4a306;
 	}
 	.styleButton:focus {
 		background: #fff;
 		color: #000;
-		border: '1px solid #0195BA';
+		border: '1px solid #f4a30690';
+		border-color: #f4a306;
 		box-shadow: 0 0 10px 0 #f4a306 inset, 0 0 10px 4px #f4a306;
 	}
 	.styleButton:active {
-		border: 1px solid #0195ba;
+		border: 1px solid #f4a30690;
+		border-color: #f4a306;
 	}
 	.styleButton:disabled {
 		background-color: 'rgba(0,0,0,0)';
@@ -300,6 +313,11 @@
 		);
 		bottom: 21.5vh;
 		left: 13.3vh;
+	}
+	.formAndButtonContainer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	html {
@@ -357,7 +375,7 @@
 		display: inline-flex;
 		justify-content: center;
 		padding: 30px 20px;
-
+		background: #17223c95;
 		border-radius: 4px;
 		margin-bottom: 30px;
 		width: 60vw;

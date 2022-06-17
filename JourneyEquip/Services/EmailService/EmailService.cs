@@ -1,4 +1,5 @@
 ﻿using System;
+using JourneyEquip.Modals;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
