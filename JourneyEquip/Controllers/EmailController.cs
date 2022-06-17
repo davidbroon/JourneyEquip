@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using MimeKit.Text;
 using JourneyEquip;
+using JourneyEquip.Services.EmailService;
+using JourneyEquip.Modals;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

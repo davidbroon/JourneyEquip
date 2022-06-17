@@ -1,9 +1,9 @@
 .footerContainer {
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 	height: 155px;
 	justify-content: space-evenly;
+	align-items: center;
 	background-color: #f4a306;
 }
 .footerImage {
@@ -28,4 +28,8 @@ a {
 	padding: 0 4px;
 	font-size: 24px;
 	font-weight: 400;
+}
+a:hover {
+	color: #f4a306;
+	background: #17223c;
 }
