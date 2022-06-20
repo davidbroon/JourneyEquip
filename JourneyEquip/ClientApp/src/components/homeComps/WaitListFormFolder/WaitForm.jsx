@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import './waitListForm.style.css';
 import axios from 'axios';
+import agent from '../../../api/agent';
 
 const WaitListForm = (borderLine) => {
 	const [formOpen, setFormOpen] = useContext(GlobalContext);
@@ -19,7 +20,7 @@ const WaitListForm = (borderLine) => {
 	}, [formOpen]);
 
 	const api = axios.create({
-		baseURL: `https://localhost:7077/api/email/send`,
+		baseURL: `https://localhost:7065/api/email/send`,
 	});
 
 	const {
@@ -55,8 +56,17 @@ const WaitListForm = (borderLine) => {
 			const userCountry = values.country;
 
 			try {
+				// agent.RegisterInterest.sendEmail({
+				// 	data: {
+				// 		UserName: userName,
+				// 		UserCountry: userCountry,
+				// 		UserEmail: userEmail,
+				// 	},
+				// }).catch((err) => console.log('err1', err));
 				api({
 					method: 'post',
+					headers: { 'content-type': 'application/json' },
+
 					data: {
 						UserName: userName,
 						UserCountry: userCountry,
