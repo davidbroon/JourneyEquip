@@ -10,10 +10,8 @@ const HeroBlock = () => {
 
 	useEffect(() => {
 		formOpen ? setLineDisplay('hidden') : setLineDisplay('visible');
-		console.log(lineDisplay);
 	}, [formOpen]);
 	const pStyles = formOpen ? { height: '14vh', fontSize: '80%' } : {};
-	console.log(lineDisplay);
 	return (
 		<div className='heroImage'>
 			<div className='heroContainer'>
@@ -24,20 +22,7 @@ const HeroBlock = () => {
 				</div>
 
 				<div className='heroButtonAndLine'>
-					{/* <button className='styleButton'>Chat With the team</button> */}
-					{/* <div className='heroLine' style={{ background: accent3 }} /> */}
-
 					<WaitListForm />
-					{/* <button
-						className='styleButton heroButton'
-						style={{
-							color: '#000',
-							backgroundColor: 'transparent',
-							fontWeight: 700,
-						}}
-					>
-						Register Your Interest
-					</button> */}
 					<div
 						className='heroLine'
 						style={{ background: accent3, visibility: lineDisplay }}

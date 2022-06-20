@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿global using JourneyEquip.Modals;
+global using JourneyEquip.Services.EmailService.Apply;
+global using JourneyEquip.Services.EmailService.Interest;
+global using JourneyEquip.Services.EmailService.Send;
+global using MailKit.Net.Smtp;
+global using MimeKit;
+using JourneyEquip.Data;
+using JourneyEquip.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
-using JourneyEquip.Data;
-using JourneyEquip.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +28,19 @@ builder.Services.AddIdentityServer()
 builder.Services.AddAuthentication()
     .AddIdentityServerJwt();
 
+builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IinterestEmailService, InterestEmailService>();
+builder.Services.AddScoped<ISendEmailService, SendEmailService>();
+builder.Services.AddScoped<IUserApplicationEmailService, UserApplicationEmailService>();
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy("CorsPolicy", policyDetails =>
+    {
+        policyDetails.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+    });
+});
 
 var app = builder.Build();
 
@@ -41,6 +58,7 @@ else
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseCors("CorsPolicy");
 
 app.UseAuthentication();
 app.UseIdentityServer();
